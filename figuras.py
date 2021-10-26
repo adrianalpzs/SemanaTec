@@ -1,4 +1,4 @@
-import numpy
+import math
 from turtle import *
 
 
