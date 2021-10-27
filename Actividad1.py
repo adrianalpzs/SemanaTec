@@ -1,6 +1,8 @@
 from turtle import *
 from freegames import vector
 
+
+
 def line(start, end):
     "Draw line from start to end."
     up()
@@ -26,6 +28,7 @@ def square(start, end):
 
 def circle(start, end):
     "Draw circle from start to end."
+    
     up()
     goto(start.x, start.y)
     right(90)
@@ -35,8 +38,10 @@ def circle(start, end):
     for count in range(360):
         forward((end.x - start.x)/120)
         left(1)
-
+    speed(0)
     end_fill() 
+    
+    
 
 def rectangle(start, end):
     up()
@@ -61,6 +66,7 @@ def triangle(start, end):
         forward(end.x - start.x)
         left(90)
         left(150)
+        
     end_fill()
 
 def tap(x, y):
