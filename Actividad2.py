@@ -24,12 +24,6 @@ food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
 
-#La comida se mueve en aletorio dentro de la ventana
-def mFood():
-    food.x = randrange(-15, 15) * 10
-    food.y = randrange(-15, 15) * 10
-    ontimer(mFood, 4500)
-
 def change(x, y):
     "Change snake direction."
     aim.x = x
@@ -67,6 +61,27 @@ def move():
     update()
     ontimer(move, 100)
 
+#La comida se mueve en aletorio dentro de la ventana
+def moveFood():
+
+    option = randrange(0,2)
+    if(option == 0):
+        if (food.x == -200):
+            food.x += 10
+        elif (food.x == 190):
+            food.x -= 10
+        else:
+            food.x += randrange(-10, 11, 20)
+    else:
+        if(food.y == -200):
+            food.y += 10
+        elif(food.y == 190):
+            food.y -= 10
+        else:
+            food.y += randrange(-10, 11, 20)
+
+    ontimer(moveFood, 500)
+
 setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)
@@ -75,6 +90,6 @@ onkey(lambda: change(10, 0), 'Right')
 onkey(lambda: change(-10, 0), 'Left')
 onkey(lambda: change(0, 10), 'Up')
 onkey(lambda: change(0, -10), 'Down')
-mFood()
+moveFood()
 move()
 done()
