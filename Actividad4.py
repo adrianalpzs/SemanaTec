@@ -57,10 +57,10 @@ def move():
 
     for target in targets:
         if not inside(target):
-            #Reposición
+            #Para que el juego no termine
             target.x = 200
 
-    #Velocidad
+    #Aumento de velocidad
     ontimer(move, 20)
 
 setup(420, 420, 370, 0)
