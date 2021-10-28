@@ -26,6 +26,7 @@ def square(start, end):
 
     end_fill()
 
+#Dibujo del círculo
 def circle(start, end):
     "Draw circle from start to end."
     
@@ -43,7 +44,7 @@ def circle(start, end):
     end_fill() 
     
     
-
+#Dibujo del rectángulo
 def rectangle(start, end):
     up()
     goto(start.x, start.y)
@@ -56,6 +57,7 @@ def rectangle(start, end):
         right(90)
     end_fill()
 
+#Dibujo del triángulo
 def triangle(start, end):
     "Draw triangle from start to end."
     up()
@@ -91,6 +93,8 @@ setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
 onkey(undo, 'u')
+
+#Se  agregó el color purple
 onkey(lambda: color('purple'), 'P')
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
