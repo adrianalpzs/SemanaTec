@@ -8,6 +8,7 @@ Podrías utilizar algo diferente a los dígitos
 para resolver el juego y que al usuario le ayude a tener mejor memoria ?
 """
 #Sí, añadiendo colores
+#Condimento de innovación
 
 car = path('car.gif') 
 tiles = list(range(32)) * 2
@@ -16,6 +17,7 @@ hide = [True] * 64
 click_count = 0
 end = False
 change_tiles = False
+#Sección de colores
 colores = ['#FFEBEE', '#F8BBD0', '#E1BEE7',  '#D1C4E9', '#C5CAE9', 
 	   '#BBDEFB', '#B3E5FC', '#B2EBF2', '#B2DFDB', '#C8E6C9',
 	   '#DCEDC8', '#F0F4C3', '#FFF9C4', '#FFECB3', '#FFE0B2',
@@ -72,10 +74,13 @@ def draw():
     clear()
     goto(0, -30)
     shape(car)
+    #Se muestra el numero de taps y detectar cuando todos los cuadros se han destapado
     if True not in hide:
         end = True
+        #Cuando todos los cuadros se han destapado
         text = "Has ganado con " + str(click_count) + " intentos"  
     else:
+        #Despleiga el numero de taps
         text = "Número de intentos: "+ str(click_count) 
         
     stamp()
@@ -110,6 +115,7 @@ def draw():
 
     mark = state['mark']
 
+#Centar el dígito en el cuadro
     if mark is not None and hide[mark]:
         x, y = xy(mark)
         square(x, y, colores[tiles[mark]])
