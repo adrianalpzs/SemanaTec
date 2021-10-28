@@ -60,7 +60,7 @@ def move():
             #Para que el juego no termine
             target.x = 200
 
-    #Aumento de velocidad
+    #Aumento de velocidad 50->20
     ontimer(move, 20)
 
 setup(420, 420, 370, 0)
