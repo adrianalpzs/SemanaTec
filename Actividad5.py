@@ -1,3 +1,8 @@
+#Actividad 5 Juego de Memoria
+#Adriana Ines Lopez Sanchez
+#Michelle Rayas Guevara
+
+#Bibliotecas
 from random import *
 from turtle import *
 from freegames import path
