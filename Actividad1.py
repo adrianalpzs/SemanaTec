@@ -1,3 +1,8 @@
+#Actividad 1 Juego pintado
+#Adriana Ines Lopez Sanchez
+#Michelle Rayas Guevara
+
+#Bibliotecas
 from turtle import *
 from freegames import vector
 
@@ -10,7 +15,7 @@ def line(start, end):
     down()
 
 
-    
+
     goto(end.x, end.y)
 
 def square(start, end):
@@ -26,10 +31,10 @@ def square(start, end):
 
     end_fill()
 
-#Dibujo del círculo
+#Dibujar circulo
 def circle(start, end):
     "Draw circle from start to end."
-    
+
     up()
     goto(start.x, start.y)
     right(90)
@@ -39,12 +44,12 @@ def circle(start, end):
     for count in range(360):
         forward((end.x - start.x)/120)
         left(1)
-        
+
     speed(0)
-    end_fill() 
-    
-    
-#Dibujo del rectángulo
+    end_fill()
+
+
+#Dibujar rectangulo
 def rectangle(start, end):
     up()
     goto(start.x, start.y)
@@ -57,7 +62,7 @@ def rectangle(start, end):
         right(90)
     end_fill()
 
-#Dibujo del triángulo
+#Dibujar triangulo
 def triangle(start, end):
     "Draw triangle from start to end."
     up()
@@ -69,7 +74,7 @@ def triangle(start, end):
         forward(end.x - start.x)
         left(90)
         left(150)
-        
+
     end_fill()
 
 def tap(x, y):
@@ -96,6 +101,7 @@ onkey(undo, 'u')
 
 #Se  agregó el color purple
 onkey(lambda: color('purple'), 'P')
+#Colores del codigo de referencia
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')

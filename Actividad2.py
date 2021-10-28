@@ -1,12 +1,20 @@
+#Actividad 2 Juego de la vibora
+#Adriana Ines Lopez Sanchez
+#Michelle Rayas Guevara
+
+#Bibliotecas
 from turtle import *
 from random import randrange
 from freegames import square, vector
 import random
 
+#Colores para vibora y comida
 colors=['blue', 'green', 'purple','yellow','orange']
 
+#Designar color a vibora (aleatorio)
 bodyc=random.choice(colors)
 
+#Designar color a comida (aleatorio)
 foodc=random.choice(colors)
 
 if foodc==bodyc:
@@ -16,6 +24,7 @@ food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
 
+#La comida se mueve en aletorio dentro de la ventana
 def mFood():
     food.x = randrange(-15, 15) * 10
     food.y = randrange(-15, 15) * 10
