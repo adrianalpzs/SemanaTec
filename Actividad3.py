@@ -1,3 +1,8 @@
+#Actividad 3 Juego del Pacman
+#Adriana Ines Lopez Sanchez
+#Michelle Rayas Guevara
+
+#Bibliotecas
 from random import choice
 from turtle import *
 from freegames import floor, vector
